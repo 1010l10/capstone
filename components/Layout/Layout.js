@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import BackToTop from '../elements/BackToTop';
-import Footer from './Footer';
-import Header from './Header';
+
 import Sidebar from './Sidebar';
 
 const Layout = ({ children }) => {
@@ -21,12 +20,12 @@ const Layout = ({ children }) => {
     return (
         <>
             <div className="body-overlay-1" onClick={handleRemove} />
-            <Header handleOpen={handleOpen} handleRemove={handleRemove} openClass={openClass} />
+            
             <Sidebar openClass={openClass} />
             <main className="main">
                 {children}
             </main>
-            <Footer />
+         
             <BackToTop />
         </>
     );
